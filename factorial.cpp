@@ -1,22 +1,21 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
- int fiboncchi(int n){
 
-     int i,fact;
-     fact=0;
-     for(i=1;i<=n;i++)
-     {
-        fact=fact+i;
-
-     }
-    cout<<fact<<endl;
- }
-
-int main()
-{
+int main() {
     int n;
-    cin>>n;
-    fiboncchi(n);
+    long factorial = 1.0;
 
- }
+    cout << "Enter a positive integer: ";
+    cin >> n;
 
+    if (n < 0)
+        cout << "Error! Factorial of a negative number doesn't exist.";
+    else {
+        for(int i = 1; i <= n; ++i) {
+            factorial *= i;
+        }
+        cout << "Factorial of " << n << " = " << factorial;    
+    }
+
+    return 0;
+}
